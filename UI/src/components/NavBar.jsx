@@ -3,12 +3,14 @@ import { useEffect, useRef, useState } from "react";
 export function NavBar() {
   return (
     <div className="bg-[#181E23] h-fit text-white pl-2 pt-2">
-      NavBar <Options />
+      {/* Settings  */}
+      <Options />
     </div>
   );
 }
 
 function Options() {
+  
   const workspaceRef = useRef("workspaceRef");
   const membersRef = useRef("membersRef");
   const rolesRef = useRef("rolesRef");
@@ -32,12 +34,15 @@ function Options() {
     console.log("workspaceRef = ", workspaceRef);
     console.log("width : ", width);
     let rect = selected.current.getBoundingClientRect();
-    console.log("rect : ", rect.x)
+    console.log("rect : ", rect)
   }, [selected,width]);
 
 
   return (
-    <div className="fixed">
+    <div className="ml-4">
+      Settings
+    <div className="relative">
+      
       <div className="flex mt-5  text-sm  border-b-white" id="options">
         <div
           ref={workspaceRef}
@@ -70,10 +75,11 @@ function Options() {
         </div>
       </div>
       <span
-        className={`bg-[#38BDF8] absolute top-12  h-1 transition-all duration-300`}
-        style={{width:`${selected.current.offsetWidth}px`, left:`${width-8}px`}}
+        className={`bg-[#38BDF8] absolute top-8  h-1 transition-all duration-300`}
+        style={{width:`${selected.current.offsetWidth}px`, left:`${width-24}px`}}
         id=""
       ></span>
+    </div>
     </div>
   );
 }
