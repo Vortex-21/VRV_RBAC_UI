@@ -15,7 +15,7 @@ To set up the project locally, follow these steps:
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/Vortex-21/VRV_RBAC_UI.git
-cd VRV_RBAC_UI
+cd VRV_RBAC_UI/UI
 ```
 ### 2. Install dependencies
 
